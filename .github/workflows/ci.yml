@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  schedule:
+    # Mondays, so that a newly published advisory is noticed without a push.
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup toolchain install stable --profile minimal --component rustfmt,clippy
+      - run: rustup default stable
+      - run: cargo fmt --check
+      - run: cargo clippy --all-targets --locked -- -D warnings
+      - run: cargo test --locked
+
+  interop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: rustup toolchain install stable --profile minimal
+      - run: rustup default stable
+      - run: cargo build --release --locked
+      - run: node interop/check.mjs target/release/riegel
+
+  # Checks the locked dependencies against the RustSec advisory database.
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo install cargo-audit --locked
+      - run: cargo audit

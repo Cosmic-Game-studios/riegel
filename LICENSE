@@ -1,0 +1,115 @@
+Riegel Source-Available License, Version 1.0
+(non-commercial use only; no military use)
+
+Copyright (c) 2026 Cosmic-Game-studios (https://github.com/Cosmic-Game-studios).
+All rights reserved.
+
+This is not an open-source license. The Software is published so that it can be
+read, examined and used privately. Every right that this license does not
+expressly grant remains with the Licensor.
+
+
+1. Definitions
+
+"Software" means all files in this repository, in whole or in part: source
+code, documentation, specifications, test vectors and build files.
+
+"Licensor" means the copyright holder named above.
+
+"You" means the natural person or legal entity that exercises a permission
+under this license.
+
+"Commercial Use" means any use that is intended for or directed towards
+commercial advantage or monetary compensation. This includes in particular:
+(a) use by or on behalf of a business or other for-profit organisation,
+    including internal use;
+(b) use as part of, or in order to provide, a product or service that is sold,
+    licensed, rented or otherwise offered for payment or other consideration;
+(c) use in return for payment.
+
+"Military Use" means any use by or on behalf of armed forces, a ministry or
+department of defence, or a person or organisation acting for one of them, and
+any use for the development, production, testing, maintenance or operation of
+weapons, weapon systems or other equipment or services intended for military or
+warfare purposes.
+
+
+2. Permissions
+
+As long as You comply with this license, the Licensor grants You a
+non-exclusive, non-transferable, non-sublicensable, royalty-free, worldwide
+permission to
+
+(a) read and study the Software,
+(b) download, compile and run the Software, and
+(c) modify the Software for your own use,
+
+in each case only for purposes that are neither Commercial Use nor Military
+Use. Private use, teaching, and academic or independent security research are
+examples of permitted purposes.
+
+(d) You may publish analyses, reviews and security research about the
+    Software, and quote short excerpts of the Software as far as this is needed
+    to explain your findings.
+
+
+3. Restrictions
+
+You may not
+
+(a) use the Software, or any work derived from it, for Commercial Use;
+(b) use the Software, or any work derived from it, for Military Use;
+(c) distribute, publish, sublicense, sell, rent or otherwise make available to
+    others the Software or any work derived from it. Excepted are the excerpts
+    permitted by section 2(d), and copies that the terms of service of the
+    platform on which the Licensor published the Software entitle every user of
+    that platform to make (for example, forking a public repository on GitHub).
+    Every such copy remains subject to this license;
+(d) remove or alter copyright, license or attribution notices.
+
+
+4. Other uses and later versions
+
+Any use that this license does not permit, in particular Commercial Use,
+requires the prior written permission of the Licensor. The Licensor may at any
+time offer the Software, or later versions of it, under different terms.
+
+
+5. Contributions
+
+If You submit a contribution to the Licensor (for example a pull request, a
+patch or a written suggestion), You grant the Licensor a perpetual, worldwide,
+non-exclusive, royalty-free, irrevocable license to use, reproduce, modify,
+publish and distribute the contribution, and to sublicense and relicense it
+under any terms, as part of the Software or otherwise. You confirm that You are
+entitled to grant this license.
+
+
+6. Termination
+
+Your permissions under this license end automatically when You violate any of
+its terms. When they have ended, You must stop using the Software and delete
+your copies of it.
+
+
+7. Third-party components
+
+The Software depends on third-party libraries and contains third-party test
+data. These are subject to their own licenses, which this license does not
+change. See THIRD-PARTY.md.
+
+
+8. No warranty
+
+The Software is experimental cryptographic software that has not been
+independently audited. It is provided "as is", without warranty of any kind,
+express or implied, including any warranty of merchantability, of fitness for a
+particular purpose, of security or of non-infringement.
+
+
+9. Limitation of liability
+
+To the extent permitted by applicable law, the Licensor is not liable for any
+damage arising from the Software or from its use. Liability for intent and
+gross negligence, and any other liability that cannot be excluded by law,
+remains unaffected.

@@ -1,0 +1,33 @@
+[package]
+name = "riegel"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Hybrid post-quantum file encryption: X-Wing (ML-KEM-768 + X25519), HKDF-SHA-256 and ChaCha20-Poly1305"
+license-file = "LICENSE"
+repository = "https://github.com/Cosmic-Game-studios/riegel"
+publish = false
+readme = "README.md"
+
+[dependencies]
+argon2 = { version = "0.6", default-features = false, features = ["alloc", "zeroize"] }
+base64ct = { version = "1.8", features = ["alloc"] }
+chacha20poly1305 = { version = "0.11", default-features = false, features = ["alloc", "zeroize"] }
+getrandom = "0.4"
+hkdf = "0.13"
+rpassword = "7.5"
+sha2 = "0.11"
+subtle = "2.6"
+x-wing = { version = "0.1.1", features = ["hazmat", "zeroize"] }
+zeroize = "1.8"
+
+[dev-dependencies]
+hex = "0.4"
+ml-kem = { version = "0.3", features = ["hazmat"] }
+serde_json = "1"
+sha3 = "0.12"
+
+# The cryptography in the dependencies is far too slow to test when compiled without
+# optimization: Argon2 and the exhaustive tamper tests would take minutes.
+[profile.dev.package."*"]
+opt-level = 3
